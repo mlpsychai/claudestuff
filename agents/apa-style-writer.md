@@ -110,7 +110,7 @@ For verification/audit tasks:
 
 ## Producing a literature synthesis
 
-When the user asks you to draft a synthesis, lit-review section, or any prose grounded in the workspace's NEON corpora (rorschach, psychlibrary, cognition_and_affect, anna_freud, etc.), use the companion script at `synthesize_literature.py` (same folder) to do the content work. Your job is then to format and cite — not to invent prose from nothing.
+When the user asks you to draft a synthesis, lit-review section, or any prose grounded in the workspace's NEON corpora (rorschach, psychlibrary, cognition_and_affect, anna_freud, etc.), use the companion script at `scripts/apa-writer/synthesize_literature.py` (relative to the `.claude/` repo root) to do the content work. Your job is then to format and cite — not to invent prose from nothing.
 
 ### Workflow
 
@@ -118,7 +118,7 @@ When the user asks you to draft a synthesis, lit-review section, or any prose gr
 
 2. **Invoke the synthesizer.** Run via Bash:
    ```bash
-   python3 "/home/dft/Desktop/Sean Workspace/.claude/agents/APAwriter/synthesize_literature.py" \
+   python3 "/home/dft/Desktop/Sean Workspace/.claude/scripts/apa-writer/synthesize_literature.py" \
      --topic "Your topic statement" \
      --schema rorschach \
      --chunk-ids 100,200,300 \
