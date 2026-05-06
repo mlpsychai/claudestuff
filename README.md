@@ -10,7 +10,7 @@ the running journal of how the workspace is used.
 |---|---|
 | `CLAUDE.md` | Workspace persona and `/status` command definition. Loaded into every Claude Code session opened in this directory tree. |
 | `settings.local.json` | Per-machine permission grants and enabled MCP servers. |
-| `agents/` | Subagent definitions discovered by Claude Code (`agents/<name>.md`). |
+| `agents/<name>/` | One folder per subagent: contains `<name>.md` (the agent definition Claude Code discovers) and `settings.local.json` (the permission grants that agent operates with — documentary). |
 | `scripts/` | Companion scripts the agents shell out to. Organized by agent. |
 | `journal/` | Workspace status snapshots and the scribe journal. |
 
@@ -20,6 +20,7 @@ the running journal of how the workspace is used.
 
 ## Conventions
 
-- Agent definitions live flat at `agents/<name>.md` — kebab-case, one `.md` per agent.
+- Each agent gets its own folder: `agents/<name>/` containing `<name>.md` + `settings.local.json`.
 - Scripts called by an agent live at `scripts/<agent-name>/`.
-- No credentials in tracked files. `settings.local.json` is scrubbed before commit.
+- The per-agent `settings.local.json` documents what permissions the agent needs to operate — Claude Code does not load it as authoritative config. Mirror required grants into the workspace-root `settings.local.json`.
+- No credentials in tracked files. The root `settings.local.json` is scrubbed before commit.

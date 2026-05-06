@@ -1,0 +1,17 @@
+{
+  "_note": "This file documents the permission grants apa-style-writer needs to operate. Claude Code does NOT load per-agent settings.local.json files as authoritative config — the workspace-root settings.local.json is what actually grants permissions at session start. Mirror anything required here into that root file.",
+  "permissions": {
+    "allow": [
+      "mcp__ragarmy-neon__list_schemas",
+      "mcp__ragarmy-neon__semantic_search",
+      "mcp__ragarmy-neon__cross_schema_search",
+      "mcp__ragarmy-neon__query",
+      "Bash(python3 \"/home/dft/Desktop/Sean Workspace/.claude/scripts/apa-writer/synthesize_literature.py\":*)",
+      "Bash(python3 \"/home/dft/Desktop/Sean Workspace/.claude/scripts/apa-writer/summarize_topics.py\":*)",
+      "Read(/home/dft/Desktop/Sean Workspace/.claude/scripts/apa-writer/**)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "ragarmy-neon"
+  ]
+}
