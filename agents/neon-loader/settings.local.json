@@ -1,0 +1,21 @@
+{
+  "_note": "Documentary, not authoritative. Claude Code reads workspace-root settings.local.json only. Mirror required grants there.",
+  "permissions": {
+    "allow": [
+      "mcp__ragarmy-neon__list_schemas",
+      "mcp__ragarmy-neon__list_tables",
+      "mcp__ragarmy-neon__schema_stats",
+      "mcp__ragarmy-neon__schema_health",
+      "mcp__ragarmy-neon__query",
+      "Bash(cd \"/home/dft/Desktop/Sean Workspace/toolbox/NEON_loader\" && ./load.sh:*)",
+      "Bash(cd \"/home/dft/Desktop/Sean Workspace/toolbox/NEON_loader\" && python3 src/generate_embeddings.py:*)",
+      "Bash(cd \"/home/dft/Desktop/Sean Workspace/toolbox/NEON_loader\" && python3 src/setup_db.py:*)",
+      "Bash(ls \"/home/dft/Desktop/Sean Workspace/toolbox/NEON_loader/loadme\":*)",
+      "Bash(ls \"/home/dft/Desktop/Sean Workspace/toolbox/NEON_loader/assets/library\":*)",
+      "Read(/home/dft/Desktop/Sean Workspace/toolbox/NEON_loader/**)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "ragarmy-neon"
+  ]
+}

@@ -17,6 +17,8 @@ the running journal of how the workspace is used.
 ## Agents
 
 - **`apa-style-writer`** — APA 7th edition writing and citation. Pulls authoritative passages from the APA Publication Manual via the NEON `psychlibrary` schema. Calls `scripts/apa-writer/synthesize_literature.py` for corpus-grounded prose, then formats and cites.
+- **`neon-loader`** — Ingests source documents (PDF/EPUB/DOCX/TXT/MHT/HTML) into Neon Postgres schemas via the pipeline at `toolbox/NEON_loader/`. Stages, runs `load.sh`, verifies counts and embeddings.
+- **`neon-manager`** — Schema and corpus administration on Neon: stats, health audits, dedup, vector index tuning, embedding backfill. Operates on already-loaded data; does not ingest.
 
 ## Conventions
 
