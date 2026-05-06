@@ -1,14 +1,19 @@
 {
-  "_note": "This file documents the permission grants apa-style-writer needs to operate. Claude Code does NOT load per-agent settings.local.json files as authoritative config — the workspace-root settings.local.json is what actually grants permissions at session start. Mirror anything required here into that root file.",
+  "_note": "Documentary, not authoritative. Claude Code reads workspace-root settings.local.json only. Mirror required grants there. The `tools` frontmatter in apa-style-writer.md scopes which tool identities the agent may invoke; this file scopes which specific invocations within those tools are auto-approved without prompting.",
   "permissions": {
     "allow": [
       "mcp__ragarmy-neon__list_schemas",
+      "mcp__ragarmy-neon__list_tables",
       "mcp__ragarmy-neon__semantic_search",
-      "mcp__ragarmy-neon__cross_schema_search",
       "mcp__ragarmy-neon__query",
+      "mcp__ragarmy-neon__cross_schema_search",
       "Bash(python3 \"/home/dft/Desktop/Sean Workspace/.claude/scripts/apa-writer/synthesize_literature.py\":*)",
       "Bash(python3 \"/home/dft/Desktop/Sean Workspace/.claude/scripts/apa-writer/summarize_topics.py\":*)",
-      "Read(/home/dft/Desktop/Sean Workspace/.claude/scripts/apa-writer/**)"
+      "Read(/home/dft/Desktop/Sean Workspace/.claude/agents/apa-style-writer/resources/**)",
+      "Read(/home/dft/Desktop/Sean Workspace/.claude/scripts/apa-writer/**)",
+      "Read(/home/dft/Desktop/Sean Workspace/rorschach/**)",
+      "Read(/home/dft/Desktop/Sean Workspace/autism_moon/**)",
+      "Read(/home/dft/Desktop/Sean Workspace/HiTop/**)"
     ]
   },
   "enabledMcpjsonServers": [
